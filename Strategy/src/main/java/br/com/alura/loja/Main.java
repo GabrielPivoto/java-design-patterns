@@ -15,9 +15,9 @@ public class Main {
     public static void main(String[] args) {
 
         //Testando o valor do imposto pelo padrão Strategy
-        Orcamento orc = new Orcamento(new BigDecimal("550"),4);
+        Orcamento orc = new Orcamento();
         CalculadoraDeImpostos ci = new CalculadoraDeImpostos();
-        System.out.println("Valor do imposto: " + ci.calcular(orc, new ISS()));
+        System.out.println("Valor do imposto: " + ci.calcular(orc, new ISS(null)));
 
         CalculadoraDeDescontos cd = new CalculadoraDeDescontos();
         System.out.println("Valor do desconto: " + cd.calcular(orc));
